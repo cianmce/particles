@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Cian's Collisions</title>
+
+    <link href='//fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="lib/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="assets/css/particles.css" />
+    <link rel="shortcut icon" type="image/png" href="fav.png" />
+</head>
+
+<body>
+
+<div id="ui">
+    <button id="menuButton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icons" role="button">
+    <span class="ui-button-icon-primary ui-icon ui-icon-gear"></span>
+    <span class="ui-button-text">Hide Menu</span>
+    <span class="ui-button-icon-secondary ui-icon ui-icon-triangle-1-n"></span>
+    </button>
+    <div id="sliders">
+
+        <span class="info" id="pCount">Particle Count: <span>0</span></span>
+        <button id="sound"><span class="ui-icon ui-icon-volume-on"></span></button>
+
+        <div class="info" id="radiusInfo">Radius: <span>0-10</span></div>
+        <div class="slider" id="radius"></div>
+
+        <div class="info" id="densityInfo">Density: <span>0-10</span> kg/m<sup>3</sup></div>
+        <div class="slider" id="density"></div>
+
+        <div class="info" id="ppsInfo">Particles Per Second: <span>0</span></div>
+        <div class="slider" id="pps"></div>
+
+        <div class="info" id="gravityInfo">Gravity: <span>0</span> m/s<sup>2</sup></div>
+        <div class="slider" id="gravity"></div>
+
+        <div class="info" id="mediumdensityInfo">Medium: <span>0</span> kg/m<sup>3</sup></div>
+        <div class="slider" id="mediumdensity"></div>
+
+        <div class="info" id="elesticInfo">Elasticity: <span>0</span></div>
+        <div class="slider" id="elestic"></div>
+
+        <div class="info" id="lifeInfo">LifeSpan: <span>0-10</span> Seconds</div>
+        <div class="slider" id="life"></div>
+        <input type="checkbox" id="roof">
+        <label for="roof" id="roofText">
+            Roof Off
+        </label>
+        <span class="controls">Ctrl/CMD to Grab</span>
+    </div>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<!-- JS FILES -->
+<script src="lib/js/jquery-1.10.2.min.js"></script>
+<script src="lib/js/jquery-ui.js"></script>
+<script src="lib/js/soundjs-0.6.0.min.js"></script>
+<script src="assets/js/particles.js"></script>
+
+</body>
+</html>
