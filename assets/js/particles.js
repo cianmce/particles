@@ -101,8 +101,9 @@ var minLifespan = 15;
 var maxLifespan = 45;
 var restitutionMag = 0.8;
 var roof = false;
-var radiusMin=15;
-var radiusMax=30;
+var supportTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+var radiusMin = supportTouch ? 35 : 15;
+var radiusMax = supportTouch ? 70 : 30;
 // Able to grab something.
 var grabMode=false;
 // Trying to grab something
@@ -766,7 +767,7 @@ function initSliders(){
   });
   $( "#radius" ).slider({
     min: 1,
-    max: 50,
+    max: supportTouch ? 120 : 50,
     values: [radiusMin,radiusMax],
   });
   $( "#life" ).slider({
@@ -812,7 +813,7 @@ function initSliders(){
 
 function setGrabButton(){
   // if touch events in use enable grab option and unhide grabDiv
-  if('ontouchstart' in window || navigator.msMaxTouchPoints){
+  if(supportTouch){
     $("#grabContainer").show();
     $("#controls").hide();
   }
